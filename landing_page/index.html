@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Skexie</title>
+        <link rel="stylesheet" href="styles/common.css" />
+        <link rel='icon' href="./images/blocklogoicon.svg">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="./scripts/skexie.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <!-- - - - - - - - - - Topbar Section - - - - - - - - - - -->
+        <section class="topbar">
+            <a href="index.html" class="logo">skexie</a>
+            <div class="burger"></div>
+
+            <!-- - - - - - - - - - Navigation Menu - - - - - - - - -->
+            <nav class="bar-menu">
+                <img id="mobile-exit" class="mobile-exit" src="./images/exitbutton.svg" alt="Exit Navigation">
+                <a href="#try-area">Try me</a>
+                <a href="#bio">About</a>
+            </nav>
+        </section>
+
+        <!-- - - - - - - - - - - Hero Section - - - - - - - - - - -->
+        <section class="hero">
+            <div class="img-container">
+                <img src="./images/hero_graphic.svg" class="hero-img" alt="Main Image">
+            </div>
+            <div class="description">
+                <h1><span class="acronym">Sk</span>ills and
+                    <br/>
+                    <span class="acronym">Ex</span>perience
+                    <br/>
+                    <span class="acronym">I</span>nterpreter and
+                    <br/>
+                    <span class="acronym">E</span>xtractor
+                </h1>
+                <p>Skexie is an API for extracting the skills and experiences from a job offer!</p>
+                <p>It uses a custom trained AI model for NER(Named entity recognition).</p>
+            </div>
+        </section>
+
+        <!-- - - - - - - - - Try it out Section - - - - - - - -->
+        <section id="try-area" class="try-area">
+	    <div class="try-h1-top">
+		<h1>Try It Out! ᐁ </h1>
+	    </div>
+            <div class="in-out-container">
+                <textarea name="input-box" class="input-box" placeholder="Paste your job offer here..."></textarea>
+                <div class="skills-container">
+		    <div class="try-h1">
+			<h1>ᐊ Try It Out!</h1>
+		    </div>
+                    <p class="text-placeholder">
+                        Click on submit to extract the skills and experiences from a job offer.
+                        Copy and paste the text from the offer in the box to the left.
+                    </p>
+                    <ul class="skill-list"></ul>
+                    <button class="submit">SUBMIT</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- - - - - - - - - - - Bio Section. - - - - - - - - - - -->
+        <section id="bio" class="bio">
+            <div class="icons">
+                <div class="hbtn">
+                    <a href="https://www.holbertonschool.com/">
+			<img class="hbtn-img" src="./images/bio-icons/holbie.svg" alt="Holberton">
+		    </a>
+		</div>
+                <div class="torre">
+                    <a href="https://torre.co/">
+			<img class="torre-img" src="./images/bio-icons/torre.svg" alt="Torre">
+		    </a>
+		</div>
+            </div>
+            <div class="frames">
+                <div class="bros">
+                    <h1>
+			DIEGO LÓPEZ
+                    </h1>
+                    <img class="frame" src="./images/nanin.jfif" alt="Nanin">
+                    <p>
+			Full Stack Software Developer, Music Producer and Human Being.
+                    </p>
+                    <div class="link-icons">
+                        <a href="https://github.com/DiegoCol93">
+			    <img class="icon-link" src="./images/bio-icons/github.svg" alt="GitHub">
+			</a>
+                        <a href="https://twitter.com/LopezDfelo93">
+			    <img class="icon-link" src="./images/bio-icons/twitter.svg" alt="Twitter">
+			</a>
+                        <a href="https://www.linkedin.com/in/diegoflopezr/">
+			    <img class="icon-link" src="./images/bio-icons/linkedin.svg" alt="LinkedIn">
+			</a>
+		    </div>
+		</div>
+                <div class="bros">
+                    <h1>
+			ANDY LÓPEZ
+                    </h1>
+                    <img class="frame" src="./images/andy0.png" alt="Andy">
+                    <p>
+			Software Engineer in the making, Industrial Designer and English teacher.
+                    </p>
+                    <div class="link-icons">
+                        <a href="https://github.com/andylopezr">
+			    <img class="icon-link" src="./images/bio-icons/github.svg" alt="GitHub">
+			</a>
+                        <a href="https://twitter.com/_andy_lopez_">
+
+			    <img class="icon-link" src="./images/bio-icons/twitter.svg" alt="Twitter">
+			</a>
+                        <a href="https://www.linkedin.com/in/andreslopezruiz/">
+			    <img class="icon-link" src="./images/bio-icons/linkedin.svg" alt="LinkedIn">
+			</a>
+		    </div>
+		</div>
+            </div>
+        </section>
+
+        <!-- - - - - - - - - - - - Footer. - - - - - - - - - - - -->
+        <footer class="lopez">
+            Lopez Bros Inc 2021 © All Rigths Reserved
+        </footer>
+    </body>
+</html>

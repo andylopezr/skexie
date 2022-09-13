@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  box-sizing: border-box;
+  font-family: Comfortaa;
+}
+ul {
+  list-style-type: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+/*- - - - - - - - - - - - - - - Color pallete- - - - - - - - - - - - - - - - */
+:root {
+  --dgreen: #4aa96c;
+  --lgreen: #9fe6a0;
+  --red: #f55c47;
+  --dgray: #564a4a;
+  --lgray: #b3b3b3;
+}
+/* - - - - - - - - - - - - Dark Mode default colors. - - - - - - - - - - - - */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* --dgreen: #2f6a43; */
+    --lgreen: #4aa96c;
+    --dgray: #FFFFFF;
+    --white: #1c1c1c
+  }
+}
+/* - - - - - - - - - - - - - - HTML attributes. - - - - - - - - - - - - - - -*/
+html { /* body won't work ¯\_(ツ)_/¯ */
+  /* overflow-y: scroll; */
+  /* scroll-snap-type: y mandatory; */
+  height: 50vh;
+}
+/* - - - - - - - - - - - - - - Body attributes. - - - - - - - - - - - - - - -*/
+body {
+  background: var(--white);
+  height: 300vh;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+/* - - - - - - - - - - - - - Top Bar menu and logo - - - - - - - - - - - - - */
+.topbar {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  padding-top: 2em;
+  width: 100%;
+  height: 5vh;
+  background: none;
+  place-content: space-between;
+  align-content: center;
+}
+.logo {
+  margin-left: 1em;
+  color: var(--dgray);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2em;
+  align-self: center;
+}
+@media only screen and (orientation: landscape) and (max-width: 768px) {
+  .logo {
+    font-size: 1.5em;
+  }
+}
+.burger {
+  margin-right: 2em;
+  width: 3em;
+  height: 3em;
+  align-self: center;
+  cursor: pointer;
+}
+@media only screen and (orientation: landscape) and (max-width: 768px) {
+  .burger {
+    width: 2em;
+    height: 2em;
+  }
+}
+/* - - - - - - - - - - - - - Menu - - - - - - - - - - - - - */
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 25vw;
+  right: 0;
+  top: 0;
+  background-color: var(--red);
+  height: 100vh;
+  padding: 1em;
+}
+@media only screen and (orientation: portrait) {
+  nav {
+    width: 50vw;
+  }
+}
+.bar-menu ul {
+  padding-top: 3em;
+}
+.bar-menu li {
+  list-style-type: none;
+  color: white;
+  text-decoration: none;
+  padding: .5em;
+  font-size: 1.3 em;
+  text-align: right;
+}
+.bar-menu a:hover {
+  font-weight: bold;
+}
+.bar-menu {
+  display: none;
+}
+.topbar .mobile-exit {
+  float: right;
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+}
+.try-me {
+  display: block;
+  border-radius: 0.5em;
+  color: white;
+  text-decoration: none;
+  justify-content: right;
+}
+/* - - - - - - - - - - - - - -  Hero Section. - - - - - - - - - - - - - - - -*/
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+@media only screen and (orientation: landscape) {
+  .hero {
+    flex-direction: row;
+  }
+}
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 50vh;
+}
+@media only screen and (orientation: landscape) {
+  .img-container {
+    width: 50vw;
+    height: 100vh;
+  }
+}
+.hero-img {
+  width: 70vw;
+  align-self: center;
+}
+@media only screen and (orientation: landscape) {
+  .hero-img {
+    width: 40vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+}
+.description {
+  background-color: var(--lgreen);
+  color: var(--dgray);
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+@media only screen and (orientation: landscape) {
+  .description {
+    height: 100vh;
+    width: 50vw;
+  }
+}
+.description h1 {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  margin-left: 2em;
+  margin-right: 2em;
+  align-self: center;
+  color: var(--dgray);
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+@media only screen and (orientation: landscape) and (max-width: 768px) {
+  .description h1 {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .description h1 {
+    font-size: 2em;
+  }
+}
+.acronym {
+  color: var(--red);
+}
+.description p {
+  margin-left: 4em;
+  margin-right: 2em;
+  margin-bottom: 1em;
+  align-self: center;
+}
+/*- - - - - - - - - - - - - - Try it out section. - - - - - - - - - - - - - -*/
+.try-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+.try-h1 {
+  /* margin-top: 5vh; */
+  /* margin-bottom: 5vh; */
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  font-size: 1.5em;
+  color: var(--red);
+}
+.in-out-container {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  width: 100%;
+}
+@media only screen and (orientation: landscape) {
+  .in-out-container {
+    flex-direction: row;
+    align-content: center;
+  }
+}
+.input-box{
+  background-color: var(--lgreen);
+  color: var(--dgray);
+  font-size: 1em;
+  width: 80vw;
+  resize: none;
+  border: none;
+  padding: 3em;
+}
+@media only screen and (orientation: landscape) {
+  .input-box{
+    width: 50vw;
+  }
+}
+@media only screen and (orientation: portrait) {
+  .input-box{
+    align-self: center;
+    height: inherit;
+  }
+}
+::placeholder {
+  color: var(--dgray);
+  font-size: 1.5em;
+}
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  font-size: 1.5em;
+  color: var(--lgray);
+  justify-content: space-evenly;
+}
+@media only screen and (orientation: portrait) {
+  .skills-container {
+    width: 100vw;
+  }
+}
+.text-placeholder {
+  margin: 5vw;
+}
+@media only screen and (orientation: portrait) {
+  .text-placeholder {
+    display: none;
+  }
+}
+.skill-list {
+  color: var(--dgray);
+  height: 60%;
+  width: 50vw;
+  display: none;
+  flex-direction: column;
+  align-self: center;
+  overflow-y: scroll;
+  list-style-type: none;
+}
+@media only screen and (orientation: portrait) {
+  .skill-list {
+    height: 70%;
+  }
+}
+.skill-list li{
+  margin: 2em 2em 2em 2em;
+}
+.skill {
+  color: var(--dgreen);
+}
+.experience {
+  color: var(--red);
+}
+.try-area button {
+  width: 200px;
+  height: 3em;
+  font-weight: 700;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  font-size: 1em;
+  color: var(--lgray);
+  background-color: var(--red);
+  border: 0.5em solid var(--red);
+  border-radius: 0.8em;
+  align-self: center;
+  cursor: pointer;
+}
+/* - - - - - - - - - - - - - - Biography area. - - - - - - - - - - - - - - - */
+.bio {
+  background-color: var(--dgreen);
+  text-align: center;
+  height: 100vh;
+  color: white;
+  scroll-snap-align: start;
+}
+.bio img {
+  height: 5em;
+  border-radius: 7em;
+  filter: grayscale(100%);
+}
+.bio li {
+  background-color: var(--dgreen)
+}
+/* - - - - - - - - - - - - - - - - Footer. - - - - - - - - - - - - - - - - - */
+.lopez {
+  position: absolute;
+  background: none;
+  height: 1vh;
+  padding: 1em;
+  font-size: 1em;
+  bottom: 0;
+  align-self: center;
+  color: white;
+  padding-bottom: 3em;
+}
+@media only screen and (min-width: 768px) {
+  /* body { */
+  /*   background-color: #000000; */
+  /* } */
+}
